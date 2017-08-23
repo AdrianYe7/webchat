@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>chat-parent</artifactId>
+        <groupId>com.xyz.webchat</groupId>
+        <version>1.1-SNAPSHOT</version>
+        <relativePath>../chat-parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>chat-main</artifactId>
+    <packaging>jar</packaging>
+
+    <name>chat-main</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--c3p0 start-->
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.5.2</version>
+        </dependency>
+        <!--c3p0 end-->
+
+        <!--mysql start-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.java.version}</version>
+        </dependency>
+        <!--mysql end-->
+
+        <!--chat module start-->
+        <dependency>
+            <groupId>com.xyz.webchat</groupId>
+            <artifactId>chat-chat</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.xyz.webchat</groupId>
+            <artifactId>chat-chat</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!--chat module end-->
+    </dependencies>
+</project>
